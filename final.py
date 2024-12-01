@@ -95,9 +95,9 @@ likelihood_table = pd.DataFrame({
 })
 
 
-print("\nFrequency Table:")
+print("\nТаблица Frequency:")
 print(freq_table)
-print("\nLikelihood table:")
+print("\nТаблица Likelihood:")
 print(likelihood_table)
 
 
@@ -114,5 +114,5 @@ word_probs = pd.DataFrame({
     "P(Word|Positive)": positive_probs
 })
 
-print("\nProbabilities:")
+print("\nВероятности:")
 print(word_probs)
