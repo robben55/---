@@ -81,7 +81,7 @@ positive_word_count = np.exp(positive_log_probs*model.class_count_[1])
 total_negative_words = negative_word_count.sum()
 total_positive_words = positive_word_count.sum()
 
-
+pd.options.display.float_format = "{:.8f}".format
 freq_table = pd.DataFrame({
     "Word": feature_names,
     "Frequency(Negative)": negative_word_count,
@@ -96,9 +96,9 @@ likelihood_table = pd.DataFrame({
 
 
 print("\nТаблица Frequency:")
-print(freq_table)
+print(freq_table.to_string())
 print("\nТаблица Likelihood:")
-print(likelihood_table)
+print(likelihood_table.to_string())
 
 
 
@@ -115,4 +115,4 @@ word_probs = pd.DataFrame({
 })
 
 print("\nВероятности:")
-print(word_probs)
+print(word_probs.to_string())
